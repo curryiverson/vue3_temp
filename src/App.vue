@@ -1,20 +1,14 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>项目准备阶段</div>
+  <div>
+    <svg-icon name="phone" width="30" height="30"></svg-icon>
+    项目准备阶段
+  </div>
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+<style scoped lang="scss">
+  div {
+    color: $color;
+  }
 </style>
