@@ -1,11 +1,7 @@
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <div>
-    项目准备阶段
-  </div>
+  <div>项目准备阶段</div>
 </template>
 
 <style scoped>

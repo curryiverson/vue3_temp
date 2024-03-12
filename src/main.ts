@@ -12,4 +12,5 @@ app.use(ElementPlus, {
   locale: zhCn,
 })
 
+// console.log(import.meta.env)
 app.mount('#app')
