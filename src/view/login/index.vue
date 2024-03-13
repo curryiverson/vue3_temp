@@ -8,7 +8,7 @@
           <h2 class="logo-welcome">欢迎来到Ikun甄选</h2>
           <el-form :model="loginForm" class="loginForm">
             <el-form-item>
-              <el-input v-model="loginForm.userName" :prefix-icon="User" />
+              <el-input v-model="loginForm.username" :prefix-icon="User" />
             </el-form-item>
             <el-form-item>
               <el-input
@@ -18,7 +18,7 @@
               />
             </el-form-item>
           </el-form>
-          <el-button type="primary">登录</el-button>
+          <el-button type="primary" @click="login">登录</el-button>
         </div>
       </el-col>
     </el-row>
@@ -28,10 +28,41 @@
 <script lang="ts" setup>
 import { reactive } from 'vue'
 import { User, Lock } from '@element-plus/icons-vue'
+import { useUserStore } from '@/store/modules/user.ts'
+import { useRouter } from 'vue-router'
+import { ElNotification } from 'element-plus'
+const userUser = useUserStore()
+const $router = useRouter()
 const loginForm = reactive({
-  userName: 'admin',
+  username: 'admin',
   password: '111111',
 })
+const login = () => {
+  // try {
+  //   await userUser.userLogin(loginForm)
+  userUser
+    .userLogin(loginForm)
+    .then((res) => {
+      ElNotification({
+        title: 'Success',
+        message: res,
+        type: 'success',
+      })
+      $router.push('/')
+    })
+    .catch((error) => {
+      console.log('error', error)
+      ElNotification({
+        title: 'Error',
+        message: error.message,
+        type: 'error',
+      })
+    })
+  //   $router.push('/')
+  // } catch (error) {
+
+  // }
+}
 </script>
 <style scoped lang="scss">
 .login_backGround {

@@ -19,11 +19,15 @@ import '@/styles/index.scss'
 //引入路由
 import router from '@/router/index'
 
+//引入pinia
+import pinia from '@/store/index'
+
 const app = createApp(App)
 app.use(ElementPlus, {
   locale: zhCn,
 })
 app.use(gloablComponent)
 app.use(router)
+app.use(pinia)
 // console.log(import.meta.env)
 app.mount('#app')
