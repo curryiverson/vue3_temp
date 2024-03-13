@@ -1,9 +1,9 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import {routes} from '@/router/routes'
+import { routes } from '@/router/routes'
 
 const router = createRouter({
   // hash模式
-  history:createWebHashHistory(),
+  history: createWebHashHistory(),
   routes,
   //滚动行为
   scrollBehavior() {

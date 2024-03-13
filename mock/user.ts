@@ -1,5 +1,5 @@
 //用户信息数据
-function createUserList () {
+function createUserList() {
   return [
     {
       userId: 1,
@@ -38,7 +38,7 @@ export default [
       const { username, password } = body
       //调用获取用户信息函数,用于判断是否有此用户
       const checkUser = createUserList().find(
-        item => item.username === username && item.password === password,
+        (item) => item.username === username && item.password === password,
       )
       //没有用户返回失败信息
       if (!checkUser) {
@@ -53,11 +53,11 @@ export default [
   {
     url: '/api/user/info',
     method: 'get',
-    response: request => {
+    response: (request) => {
       //获取请求头携带token
       const token = request.headers.token
       //查看用户信息是否包含有次token用户
-      const checkUser = createUserList().find(item => item.token === token)
+      const checkUser = createUserList().find((item) => item.token === token)
       //没有返回失败的信息
       if (!checkUser) {
         return { code: 201, data: { message: '获取用户信息失败' } }

@@ -1,12 +1,12 @@
-export interface LoginData{
-  username:string,
-  password:string
+export interface LoginData {
+  username: string
+  password: string
 }
 
 interface tokenData {
-  token:string
+  token: string
 }
-export interface loginResData{
-  code:number,
-  data:tokenData
+export interface loginResData {
+  code: number
+  data: tokenData
 }
