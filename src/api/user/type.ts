@@ -4,7 +4,7 @@ export interface LoginData {
 }
 
 interface tokenData {
-  token?: string,
+  token?: string
   message?: string
 }
 export interface loginResData {

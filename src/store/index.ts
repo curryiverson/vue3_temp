@@ -1,4 +1,4 @@
-import { createPinia  } from 'pinia'
+import { createPinia } from 'pinia'
 // 引入pinia本地持久化插件
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 
