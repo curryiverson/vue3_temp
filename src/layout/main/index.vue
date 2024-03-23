@@ -13,7 +13,7 @@
 .fade-leave-to {
   opacity: 0;
 }
-.fade-enter-active{
+.fade-enter-active {
   transition: all 1s;
 }
 </style>

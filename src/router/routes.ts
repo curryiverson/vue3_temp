@@ -5,7 +5,7 @@ export const routes = [
     name: 'login',
     meta: {
       desc: '登录',
-      hidden: true
+      hidden: true,
     },
   },
   {
@@ -14,7 +14,7 @@ export const routes = [
     name: 'layout',
     meta: {
       desc: 'layout',
-      hidden: false
+      hidden: false,
     },
     children: [
       {
@@ -24,7 +24,7 @@ export const routes = [
         meta: {
           desc: '首页',
           hidden: false,
-          icon:'HomeFilled'
+          icon: 'HomeFilled',
         },
       },
     ],
@@ -36,7 +36,7 @@ export const routes = [
     meta: {
       desc: '数据大屏',
       hidden: false,
-      icon:"Platform"
+      icon: 'Platform',
     },
   },
   {
@@ -46,7 +46,7 @@ export const routes = [
     meta: {
       desc: '权限管理',
       hidden: false,
-      icon:"Lock"
+      icon: 'Lock',
     },
     children: [
       {
@@ -56,7 +56,7 @@ export const routes = [
         meta: {
           desc: '用户管理',
           hidden: false,
-          icon:'Avatar'
+          icon: 'Avatar',
         },
       },
       {
@@ -66,7 +66,7 @@ export const routes = [
         meta: {
           desc: '角色管理',
           hidden: false,
-          icon:'UserFilled'
+          icon: 'UserFilled',
         },
       },
       {
@@ -76,7 +76,7 @@ export const routes = [
         meta: {
           desc: '菜单管理',
           hidden: false,
-          icon:'Grid'
+          icon: 'Grid',
         },
       },
     ],
@@ -87,7 +87,7 @@ export const routes = [
     name: '404',
     meta: {
       desc: '404',
-      hidden: true
+      hidden: true,
     },
   },
   // {

@@ -6,7 +6,12 @@
         <div class="formBox">
           <h1 class="logo-text">Hello</h1>
           <h2 class="logo-welcome">欢迎来到Ikun甄选</h2>
-          <el-form :model="loginForm" class="loginForm" :rules="rules" ref="ruleFormRef">
+          <el-form
+            :model="loginForm"
+            class="loginForm"
+            :rules="rules"
+            ref="ruleFormRef"
+          >
             <el-form-item prop="username">
               <el-input v-model="loginForm.username" :prefix-icon="User" />
             </el-form-item>
@@ -26,7 +31,7 @@
 </template>
 
 <script lang="ts" setup>
-import { reactive , ref} from 'vue'
+import { reactive, ref } from 'vue'
 import { User, Lock } from '@element-plus/icons-vue'
 import { useUserStore } from '@/store/modules/user.ts'
 import { useRouter } from 'vue-router'

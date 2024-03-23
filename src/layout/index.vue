@@ -33,7 +33,7 @@ import useLayOutSettingStore from '@/store/modules/setting'
 let LayOutSettingStore = useLayOutSettingStore()
 
 let $route = useRoute()
-console.log('$route',$route.path)
+console.log('$route', $route.path)
 
 let userStore = useUserStore()
 </script>
