@@ -1,11 +1,14 @@
 import { defineStore } from 'pinia'
 import { reqLogin } from '@/api/user/index'
 import type { LoginData, loginResData } from '@/api/user/type'
+import type {UserState} from './types/type'
+import { routes } from '@/router/routes'
 
 export const useUserStore = defineStore('User', {
-  state: () => {
+  state: ():UserState => {
     return {
       token: '',
+      menuRoutes: routes
     }
   },
   actions: {
